@@ -5,35 +5,40 @@
 
 /* 1. SETTINGS - Design tokens, variables, config
    ========================================================================== */
-@import "./1-settings/_settings.css";
+@import "css/1-settings/_settings.css";
 
 /* 2. GENERIC - CSS resets, normalize
    ========================================================================== */
-@import "./2-generic/_resets.css";
+@import "css/2-generic/_resets.css";
 
 /* 3. ELEMENTS - Base HTML element styles
    ========================================================================== */
-@import "./3-elements/_elements.css";
+@import "css/3-elements/_elements.css";
 
 /* 4. OBJECTS - Layout patterns, containers (OOCSS)
    ========================================================================== */
-@import "./4-objects/_layout.css";
+@import "css/4-objects/_layout.css";
 
 /* 5. COMPONENTS - UI components (BEM)
    ========================================================================== */
-@import "./5-components/_header.css";
-@import "./5-components/_nav.css";
-@import "./5-components/_configuration.css";
-@import "./5-components/_about.css";
-@import "./5-components/_social-icons.css";
-@import "./5-components/_profile.css";
-@import "./5-components/_philosophy.css";
-@import "./5-components/_knowledge.css";
-@import "./5-components/_projects.css";
-@import "./5-components/_hobbies.css";
-@import "./5-components/_footer.css";
-@import "./5-components/_contact-icons.css";
+@import "css/5-components/_header.css";
+@import "css/5-components/_nav.css";
+@import "css/5-components/_configuration.css";
+@import "css/5-components/_about.css";
+@import "css/5-components/_social-icons.css";
+@import "css/5-components/_profile.css";
+@import "css/5-components/_philosophy.css";
+@import "css/5-components/_knowledge.css";
+@import "css/5-components/_projects.css";
+@import "css/5-components/_hobbies.css";
+@import "css/5-components/_footer.css";
+@import "css/5-components/_contact-icons.css";
 
 /* 6. UTILITIES - Helper classes, overrides
    ========================================================================== */
-@import "./6-utilities/_utilities.css";
+@import "css/6-utilities/_utilities.css";
+
+
+* {
+   color: red;
+}
