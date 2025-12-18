@@ -1,2 +1,472 @@
 /* 1. Settings */
 @import "./settings.css";
+@import "./resets.css";
+
+/* 2. Elements */
+@import "./elements.css";
+
+
+.bright-red {
+    background: var(--gradient-edge-glow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header {
+    h3 {
+        font-size: var(--font-size-primary-2);
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+    }
+
+    nav {
+        font-size: var(--font-size-primary-1);
+        flex-wrap: wrap;
+    }
+    
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap);
+    }
+}
+
+.change-theme {
+    display: none;
+}
+
+.change-theme.active {
+    display: block;
+}
+
+#about-me {
+    padding-top: 70px;
+    padding-bottom: 125px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-height: 55vh;
+    gap: 50px;
+    
+    > article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        > p:first-child{
+            font-weight: bold;
+            background: var(--gradient-edge-glow);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        > p {
+            font-family: var(--font-family-secundary)
+        }
+
+        > h1 {
+            font-size: var(--font-size-primary-4);
+            letter-spacing: 10px;
+            font-weight: 500;
+        }
+
+    }
+}
+
+.container--icon {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    gap: 25px;
+
+}
+
+.background--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 4px;
+}
+
+.background--icon:first-child {
+    border-radius: 100%;
+}
+
+.container--perfil {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#perfil-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+#philosophy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    min-height: 100vh;
+
+    > div {
+        position: relative;
+        display: flex;
+        gap: 75px;
+        
+        > div {
+            gap: 150px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }
+}
+
+.container--philosophy-card {
+    position: relative;
+    flex: 1;
+    background: var(--bg-color-1);
+    box-shadow: 0 0 10px -3px var(--shadow-color-2);
+    padding: 25px;
+    border-radius: 1.5rem;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+
+    > h4 {
+        font-size: var(--font-size-primary-2);
+        font-weight: 500;
+    } 
+    > p {
+        font-size: var(--font-size-secundary-2);
+        font-family: var(--font-family-secundary);
+    }
+}
+
+.container--philosophy-card:hover {
+    border: 2px solid var(--shadow-color-1);
+}
+
+.container--philosophy-card.phatom {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.container--philosophy-card.phatom::after {
+    display: none;
+}
+
+#container--philosophy-right {
+    .container--philosophy-card:after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: -89px;
+        width: 90px;
+        height: 1px;
+        background: white;
+        transform: translateY(-50%) rotate(45deg);
+
+    }
+}
+
+
+#container--philosophy-left {
+    .container--philosophy-card:after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        width: 90px;
+        height: 1px;
+        background: white;
+        right: -89px;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+.philosophy-web, .container--philosophy-card:after {
+    border: 1px solid var(--text-color-1);
+    box-shadow: 0px 0px 8px var(--shadow-color-2);
+}
+
+#knowledge {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.container--tech-stack {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 75px;
+    row-gap: 100px;
+}
+
+.container--tech {
+    position: relative;
+    background-color: var(--bg-color-tech-icon);
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.container--tech:hover {
+    background: var(--hover-color-1);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: scale(1.1);
+}
+
+.container--tech:hover::after {
+    content: var(--after-content, "padrao");
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: var(--hover-color-1);
+    transform: translateY(30px);
+
+}
+
+#hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-height: 100vh;
+    > h2 { margin: 0; }
+    gap: 25px;
+    > h5 { font-size: var(--font-size-secundary-2); }
+    padding: 75px;
+}
+
+.container--hobbies {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hobbie-card {
+    position: relative;
+    display: flex;
+    margin-left: 140px;
+    background: var(--bg-color-hobbie-card);
+    padding: 25px 25px 25px 0;
+    
+    box-shadow: -3px 0 rgba(138, 0, 18, 0.6), 0 0 20px -10px var(--shadow-color-1);
+    border-radius: 16px;
+}
+
+.hobbie-card--enumeration {
+    display: flex;
+    align-items: start;
+    font-size: var(--font-size-primary-3);
+    font-family: var(--font-family-primary);
+    padding: 0 25px;
+}
+
+.hobbie-card--content {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    > h4 {
+        font-size: var(--font-size-primary-2);
+        font-weight: 400;
+    }
+
+    > div {
+        display: flex;
+        gap: 25px;
+
+        > small {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #404040;
+            background-color: var(--bg-color-2);
+            color: var(--text-color-3);
+        }
+    }
+}
+
+html.dark .hobbie-card--content > div > small {
+    background: var(--gradient-edge-glow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.container--hobbies::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 75px;
+    height: 100%;
+    border: 1px solid var(--bg-color-3);
+    z-index: -1;
+}
+
+
+.hobbie-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -72px;
+    border: 8px solid var(--btn-color-1);
+    border-radius: 100%;
+}
+
+footer {
+    margin: var(--margin-horizontal) var(--margin-vertical);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    > section {
+        display: flex;
+        justify-content: space-around;
+        gap: 25px;
+    }
+}
+
+.container--icon-contact {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 8px;
+    }
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    main {
+        gap: 0;
+    }
+    nav {
+        gap: 1rem;
+    }
+    header {
+        gap: 2rem;
+    }
+    #about-me {
+        padding-top: 0;
+        padding-bottom: 0;
+        flex-direction: column;
+    }
+    .container--icon {
+        margin: 0;
+    }
+    #philosophy {
+        h2 {
+            margin: 0;
+        }
+        > div {
+            flex-direction: column;
+            gap: 20px;
+            
+            > div {
+                gap: 20px;
+            }
+            
+            hr {
+                display: none;
+            }
+        }
+
+    }
+    #container--philosophy-right {
+        margin-top: 0px;
+    }
+
+    .container--philosophy-card.phatom {
+        display: none;
+    }
+
+    .container--philosophy-card:after {
+        display: none;
+    }
+
+    .container--icon {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #knowledge {
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .container--tech-stack {
+        padding: 0;
+        gap: 5px;
+        row-gap: 35px;
+        transform: scale(0.8);
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    .container--tech:hover::after {
+        transform: translateY(15px);
+    }
+
+    #hobbies, #hobbies * {
+        padding: 0;
+        margin: 10px;
+        > small {
+            margin: 0;
+            padding: 5px;
+        }
+    }
+
+    #hobbies {
+        gap: 0;
+    }
+
+    .hobbie-card--content {
+        gap: 0;
+    }
+
+    .container--hobbies::after {
+        display: none;
+    }
+    .hobbie-card::after {
+        display: none;
+    }
+
+
+    .container--icon-contact {
+        flex-wrap: wrap;
+    }
+
+}
+
+
