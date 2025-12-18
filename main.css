@@ -5,40 +5,35 @@
 
 /* 1. SETTINGS - Design tokens, variables, config
    ========================================================================== */
-@import "css/1-settings/_settings.css";
+@import "_settings.css";
 
 /* 2. GENERIC - CSS resets, normalize
    ========================================================================== */
-@import "css/2-generic/_resets.css";
+@import "_resets.css";
 
 /* 3. ELEMENTS - Base HTML element styles
    ========================================================================== */
-@import "css/3-elements/_elements.css";
+@import "_elements.css";
 
 /* 4. OBJECTS - Layout patterns, containers (OOCSS)
    ========================================================================== */
-@import "css/4-objects/_layout.css";
+@import "_layout.css";
 
 /* 5. COMPONENTS - UI components (BEM)
    ========================================================================== */
-@import "css/5-components/_header.css";
-@import "css/5-components/_nav.css";
-@import "css/5-components/_configuration.css";
-@import "css/5-components/_about.css";
-@import "css/5-components/_social-icons.css";
-@import "css/5-components/_profile.css";
-@import "css/5-components/_philosophy.css";
-@import "css/5-components/_knowledge.css";
-@import "css/5-components/_projects.css";
-@import "css/5-components/_hobbies.css";
-@import "css/5-components/_footer.css";
-@import "css/5-components/_contact-icons.css";
+@import "_header.css";
+@import "_nav.css";
+@import "_configuration.css";
+@import "_about.css";
+@import "_social-icons.css";
+@import "_profile.css";
+@import "_philosophy.css";
+@import "_knowledge.css";
+@import "_projects.css";
+@import "_hobbies.css";
+@import "_footer.css";
+@import "_contact-icons.css";
 
 /* 6. UTILITIES - Helper classes, overrides
    ========================================================================== */
-@import "css/6-utilities/_utilities.css";
-
-
-* {
-   color: red;
-}
+@import "_utilities.css";
